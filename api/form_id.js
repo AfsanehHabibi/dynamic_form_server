@@ -7,12 +7,14 @@ router.post("/api/forms/:id", function (req, res) {
 })
 router.get("/api/forms/:id", function (req, res) {
     console.log(req);
-    console.debug(forms_descriptors.forms.find(item => {
+    let result = forms_descriptors.forms.find(item => {
         return item.id == req.params.id;
-    }));
-    res.json(forms_descriptors.forms.find(item => {
-        return item.id == req.params.id;
-    }));
+    });
+    if(result){
+        res.json(result);
+    }else{
+        res.status(404).send({message:"form descriptor didnt found"})
+    }
 })
 
 module.exports = router;
