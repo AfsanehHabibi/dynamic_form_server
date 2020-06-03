@@ -55,36 +55,86 @@
             ]
         },
         {
-            "title": "mohammad",
-            "id": "2",
+            "title": "number form",
+            "id": "238",
             "fields": [
                 {
-                    "name": "Favorite_Name",
-                    "title": "Favorite_Name",
-                    "type": "Text",
+                    "name": "Favorite_Number",
+                    "title": "Favorite Number",
+                    "type": "Number",
+                    "required": false
+                },
+                {
+                    "name": "Lucky_Number",
+                    "title": "Lucky Number",
+                    "type": "Number",
+                    "required": true
+                },
+                {
+                    "name": "Hateful_Number",
+                    "title": "Hateful Number",
+                    "type": "Number",
                     "required": false
                 }
             ]
         },
         {
-            "title": "n",
-            "id": "34",
+            "title": "Login",
+            "id": "349",
             "fields": [
                 {
-                    "name": "Fav_number",
-                    "title": "Fav_number",
-                    "type": "Number",
+                    "name": "Username",
+                    "title": "Username",
+                    "type": "Text",
+                    "required": true
+                },
+                {
+                    "name": "Email",
+                    "title": "Email",
+                    "type": "Text",
                     "required": true
                 }
             ]
         },
         {
-            "title": "l",
-            "id": "78"
-        },
-        {
-            "title": "o",
-            "id": "123"
+            "title": "اطلاعات اولیه",
+            "id": "789",
+            "fields": [
+                {
+                    "name": "name",
+                    "title": "نام",
+                    "type": "Text",
+                    "required": true
+                },
+                {
+                    "name": "current_location",
+                    "title": "محل سکونت",
+                    "type": "Location",
+                    "required": true
+                },
+                {
+                    "name": "age",
+                    "title": "سن",
+                    "type": "Number",
+                    "required": true
+                },
+                {
+                    "name": "gender",
+                    "title": "جنسیت",
+                    "type": "Text",
+                    "required": true,
+                    "options": [
+                        {
+                            "label": "مرد",
+                            "value": "male"
+                        },
+                        {
+                            "label": "زن",
+                            "value": "female"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
