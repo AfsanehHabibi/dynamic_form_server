@@ -68,7 +68,15 @@
         },
         {
             "title": "n",
-            "id": "34"
+            "id": "34",
+            "fields": [
+                {
+                    "name": "Fav_number",
+                    "title": "Fav_number",
+                    "type": "Number",
+                    "required": true
+                }
+            ]
         },
         {
             "title": "l",
