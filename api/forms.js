@@ -23,4 +23,7 @@ router.get("/api/forms",function(req,res){
         res.json(forms_names);
         console.debug("no prop");
 })
+router.put("/api/forms",function(req,res){
+        
+})
 module.exports = router;
