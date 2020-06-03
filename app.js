@@ -8,6 +8,7 @@ const path=require('path');
 const morgan =require('morgan');
 const cors = require('cors');
 const app = express();
+var DB = require("./dal/base.js")
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json());
 app.use(cors());
@@ -22,6 +23,7 @@ const logger = winston.createLogger({
 app.use(morgan('dev', { stream: requestLogStream }));
 app.use(require("./api/forms.js"));
 app.use(require("./api/form_id.js"));
+exports.DB = new DB("./../asset/forms.json");
 app.set('port',process.env.PORT );
 app.listen(app.get('port'));
 logger.log({

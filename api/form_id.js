@@ -1,19 +1,20 @@
 var express = require("express");
+var variable = require("./../app.js")
 var router = express.Router();
-const forms_descriptors = require('./../asset/forms.json');
 router.post("/api/forms/:id", function (req, res) {
-    console.log("forms/id call");
+    variable.logger.log({
+        level:'info',
+        message:'sample of form '+req.params.id+ ' submitted'
+    })
     res.json({ message: "form submitted!" });
 })
 router.get("/api/forms/:id", function (req, res) {
-    console.log(req);
-    let result = forms_descriptors.forms.find(item => {
-        return item.id == req.params.id;
-    });
+    console.debug(variable.DB.findFormdescriptor(req.params.id));
+    let result = variable.DB.findFormdescriptor(req.params.id);
     if(result){
         res.json(result);
     }else{
-        res.status(404).send({message:"form descriptor didnt found"})
+        res.status(404).send({message:"form descriptor did not found"})
     }
 })
 
